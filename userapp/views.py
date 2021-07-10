@@ -12,19 +12,19 @@ import json
 import requests
 
 
-#def username_validation(request):
-#    if request.method == 'GET':
-#        try:
-#            user = User.objects.get(username=request.GET.get('name'))
-#            user_regex = '^(?=.{6,32}$)(?![_.-])(?!.*[_.-]{2})[a-zA-Z0-9._-]+(?<![_.-])$'
-#            if re.search(user_regex, request.GET.get('name')) == None:
-#                found = False
-#            else:
-#                found = True
-#            data = {'found': found}
-#        except User.DoesNotExist:
-#            data = {'found': False}
-#        return JsonResponse(data)
+def username_validation(request):
+    if request.method == 'GET':
+        try:
+            user = User.objects.get(username=request.GET.get('name'))
+            user_regex = '^(?=.{6,32}$)(?![_.-])(?!.*[_.-]{2})[a-zA-Z0-9._-]+(?<![_.-])$'
+            if re.search(user_regex, request.GET.get('name')) == None:
+                found = False
+            else:
+                found = True
+            data = {'found': found}
+        except User.DoesNotExist:
+            data = {'found': False}
+        return JsonResponse(data)
 
 
 def signup(request):
@@ -78,14 +78,14 @@ def team(request):
         return render(request, 'userapp/team.html')
 
 
-'''def signin_validation(request):
+def signin_validation(request):
     if request.method == 'GET':
         try:
             user = User.objects.get(username=request.GET.get('name'))
             data = {'is_same': True}
         except User.DoesNotExist:
             data = {'is_same': False}
-        return JsonResponse(data)'''
+        return JsonResponse(data)
 
 
 def signin(request):
@@ -96,17 +96,50 @@ def signin(request):
     else:
         username = request.POST.get('username')
         password = request.POST.get('password')
-        user = auth.authenticate(username=username, password=password)
-        if user is not None:
+        year = request.POST.get('level')
+        url = "https://backend.credenz.in/eventlogin"
+        data = {"username": username, "event": "rc",
+                "password": password, "adminpass": "pass"}
+        req = requests.post(url, data=data)
+        req_data = json.loads(req.text)
+        if req_data["allow"] == True:
+            details = req_data["user"]
+            user = User.objects.create_user(
+                username=username, password=password, first_name=details["name"], email=details["email"])
+            profile = UserProfile.objects.create(
+                user=user, phone=details["phoneno"], year=year)
+            if profile.user_logout == 1:
+                return render(request, 'userapp/SignIn.html',
+                              {'message': 'You have already attempted the quiz',  'wrong_credentials': 1})
+            if profile.emergency_time != 0 & (profile.no_question_solved < 15 | profile.decision == 1):
+                auth.login(request, user)
+                profile.login_time = datetime.now()
+                profile.predicted_logout_time = profile.login_time + \
+                    timedelta(seconds=profile.emergency_time)
+                profile.save()
+                return HttpResponseRedirect(reverse('instruction'))
+            if profile.logout_time is not None:
+                if profile.logout_time > profile.predicted_logout_time:
+                    return render(request, 'userapp/SignIn.html',
+                                  {'message': 'You have already attempted the quiz',  'wrong_credentials': 1})
+            if user.last_login is None:
+                auth.login(request, user)
+                profile.login_time = datetime.now()
+                profile.predicted_logout_time = profile.login_time
+                profile.save()
+                return HttpResponseRedirect(reverse('instruction'))
+        else:
             try:
+                user = auth.authenticate(username=username, password=password)
                 profile = UserProfile.objects.get(user=user)
                 if profile.user_logout == 1:
                     return render(request, 'userapp/SignIn.html',
                                   {'message': 'You have already attempted the quiz', 'wrong_credentials': 1})
-                if profile.emergency_time != 0 & (profile.no_question_solved < 30 | profile.decision == 1):
+                if profile.emergency_time != 0 & (profile.no_question_solved < 15 | profile.decision == 1):
                     auth.login(request, user)
                     profile.login_time = datetime.now()
-                    profile.predicted_logout_time = profile.login_time + timedelta(seconds=profile.emergency_time)
+                    profile.predicted_logout_time = profile.login_time + \
+                        timedelta(seconds=profile.emergency_time)
                     profile.save()
                     return HttpResponseRedirect(reverse('instruction'))
                 if profile.logout_time is not None:
@@ -119,11 +152,8 @@ def signin(request):
                     profile.predicted_logout_time = profile.login_time
                     profile.save()
                     return HttpResponseRedirect(reverse('instruction'))
-            except UserProfile.DoesNotExist:
-                return render(request, 'userapp/SignIn.html',
-                              {'message': 'Invalid Credentials.', 'wrong_credentials': 1})
-        else:
-            return render(request, 'userapp/SignIn.html', {'message': 'Invalid Credentials.', 'wrong_credentials': 1})
+            except Exception as e:
+                return render(request, 'userapp/SignIn.html', {"message": "Invalid Credentials. Try the username in Lowercase. ", "wrong_credentials": 1})
 
 
 def logout(request):
@@ -177,7 +207,8 @@ def quiz(request):
                     user_to_get.login_time = datetime.now()
                     user_to_get.predicted_logout_time = user_to_get.login_time + \
                         timedelta(seconds=1680)
-                    user_to_get.save(update_fields=["login_time", "predicted_logout_time"])
+                    user_to_get.save(
+                        update_fields=["login_time", "predicted_logout_time"])
                 timer = time(user_to_get.predicted_logout_time)
                 rem_time = timer
                 if (timer <= 0 & user_to_get.extra_time == 1):
@@ -192,7 +223,7 @@ def quiz(request):
                             id=user_to_get.current_ques_id)
                         current_score_to_show = user_to_get.current_score
                         if (user_to_get.decision == 1) & (user_to_get.hot_or_cold == 0 & user_to_get.vision == 0):
-
+                            print("I am here")
                             positive_marks = +2
                             negative_marks = -1
                         else:
@@ -225,7 +256,7 @@ def quiz(request):
                                 different = 1
                     elif (user_to_get.no_question_solved >= 2 & user_to_get.no_question_solved < 6):
                         while (different == 0):
-                            id1 = random.randint(1, 23)
+                            id1 = random.randint(1, 15)
                             if str(id1) not in user_to_get.question_attempted.split(" "):
                                 different = 1
                     else:
@@ -241,7 +272,7 @@ def quiz(request):
                                 different = 1
                     elif (user_to_get.no_question_solved >= 2 & user_to_get.no_question_solved < 6):
                         while (different == 0):
-                            id1 = random.randint(9, 30)
+                            id1 = random.randint(16, 30)
                             if str(id1) not in user_to_get.question_attempted.split(" "):
                                 different = 1
                     else:
