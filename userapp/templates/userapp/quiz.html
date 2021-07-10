@@ -1,0 +1,821 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+            crossorigin="anonymous"
+        />
+        <!-- Custom CSS -->
+        <!-- <link rel="stylesheet" href="{% static 'css/coding.css' %}" /> -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/coding.css' %}">
+        <script type = 'text/javascript'>
+            window.history.forward();
+            function noBack() {
+            window.history.forward();
+            }
+    </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+        <title>Quiz Page</title>
+    </head>
+
+
+<body onload="noBack();" onpageshow = "if (event.persisted) noBack();" onunload = "">
+        <header>
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="{% static 'img/RC_logo.jpeg' %}"
+                        width="55"
+                        height="40"
+                        alt=""
+                        loading="lazy"
+                    />
+                </a>
+                <a class="navbar-brand" href="#">
+                    <img
+                      src="{% static 'img/logo-cakesoft-2.png' %}"
+                      width="280"
+                      height="40"
+                      margin="1%"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+
+                <!-- Toggle Button -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item fromLeft active mr-4">
+                            <a
+                                class="nav-link"
+                                href="#"
+                                data-target="#logout"
+                                data-toggle="modal"
+                                >Logout</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="pisblogo">
+                    <img
+                        src="{% static 'img/logo pisb_2.png' %}"
+                        width="150"
+                        height="50"
+                        alt=""
+                        loading="lazy"
+                    />
+                </a>
+            </nav>
+        </header>
+        <!-- MAIN SECTION -->
+        <div class="container-fluid">
+            <div class="row">
+                <!-- LEFT COLUMN -->
+                <div class="col-12 col-md-3 d-flex flex-column">
+                    <!-- TIMER ELEMENT -->
+                    <div
+                        class="d-flex justify-content-center mt-5 mb-6"
+                        style="height: 100px"
+                    >
+                        <div
+                            class="time card bg-dark d-flex justify-content-center"
+                            style="border: 0"
+                        >
+                            <div
+                                class="card-body d-flex bg-heading justify-content-center align-content-center rounded"
+                            >
+                                <div
+                                    id="special"
+                                    class="timer rounded container-fluid text-center text-white d-flex justify-content-center align-items-center bg-dark number-text"
+                                >
+
+                                    <input
+                                        id="countTime"
+                                        type="number"
+                                        class="number-text"
+                                        value="{{remain_time}}"
+                                        hidden
+                                    />
+                                     <input
+                                        id="extra_time_offered"
+                                        type="number"
+                                        class="number-text"
+                                        value="{{extra_time}}"
+                                        hidden
+                                    />
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SCORE ELEMENT -->
+                    <div
+                        class="d-flex justify-content-center mtt mt-5 mb-6"
+                        style="height: 60px"
+                    >
+                        <div
+                            class="container text-white box-shadow score rounded d-flex other-containers"
+                        >
+                            <div
+                                class="col d-flex bg-heading align-items-center justify-content-center"
+                            >
+                                <div class="text-center heading-text">
+                                    SCORE
+                                </div>
+                            </div>
+                            <div
+                                class="col d-flex align-items-center bg-dark justify-content-center"
+                            >
+                                <div
+                                    class="score-number number-text text-center"
+                                >
+                                    <input
+                                        id="user_score"
+                                        type="number"
+                                        class="number-text"
+                                        value="{{ score }}"
+                                        hidden
+                                    />
+                                    {{ score }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LIFELINE CARD -->
+                    <div class="d-flex justify-content-center mtt mt-5">
+                        <div
+                            class="lifeline card d-flex justify-content-center box-shadow"
+                        >
+                            <div
+                                class="lifeline__header bg-heading d-flex justify-content-center card-header text-white heading-text"
+                            >
+                                LifeLines
+                            </div>
+                            <div
+                                class="lifeline__body card-body text-center text-white"
+                            >
+                                <div class="progress">
+                                    <div
+                                        class="progress-bar progress-bar-striped progress-bar-animated"
+                                        role="progressbar"
+                                        aria-valuenow="{{ progress }}"
+                                        aria-valuemin="0"
+                                        aria-valuemax="100"
+                                        style="
+                                            width: {{ progress }}%;
+                                            background-color: var(--heading);
+                                        "
+                                    ></div>
+                                </div>
+                                <hr />
+                                <form method = 'post' action = "{%url 'hot_or_cold' %}">
+                                    {% csrf_token %}
+                                     <button type = 'submit' value = 'Hot or Cold'  name = 'hot_or_cold' id = 'hot_or_cold' style = "background-color: var(--heading);"
+                                             class="btn text-white lifeline-btn heading-text" data-toggle="modal" data-target="#hot_&_cold">
+                                         Hot & Cold
+                                     </button>
+                                </form>
+                                <hr />
+                                <form method = 'post' action = "{%url 'vision' %}">
+                                    {% csrf_token %}
+                                <button
+                                    type="submit"
+                                    class="btn text-white lifeline-btn heading-text"
+                                    value = 'Vision' name = 'vision' id = 'vision'
+                                    style = "background-color: var(--heading);"
+                                >
+                                    Vision
+                                </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MIDDLE COLUMN -->
+               <div class="col-12 col-md-6">
+                    <!-- ALERT -->
+                   {% if lifeline_message %}
+                    <div
+                        class="alert alert-success mt-3"
+                        id="alert1"
+                        role="alert"
+                    >
+                        <!--button
+                            type="button"
+                            class="close"
+                            data-dismiss="alert"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button-->
+                        <div class="text-center text-turquoise">
+                            <strong>{{ lifeline_message }}</strong>
+                        </div>
+                    </div>
+                   {% endif %}
+                    <form method = 'post' action = '{% url "quiz_post" %}'>
+                        {% csrf_token %}
+                    <!-- QUESTION CONTAINER -->
+                    <div class="row mt-5" style="height: 50vh" id="question-container">
+                        <div class="container">
+                            <div
+                                class="card question-card bg-dark"
+                                style="height: 100%"
+                            >
+                                <textarea
+                                    name="question"
+                                    style="
+                                        height: 100%;
+                                        width: 100%;
+                                        resize: none;
+                                    "
+                                    class="bg-dark text-white box-shadow p-3"
+                                    readonly
+                                >
+                                    {{ question }}
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ANSWER CONTAINER -->
+                    <div class="row">
+                        <!-- ATTEMPT 1 -->
+                        <div class="col-12 col-md-5 mt-3" >
+                            <ul class="list-group box-shadow mt-6res">
+                                <li
+                                    class="list-group-item text-white d-flex justify-content-center align-items-center" id = 'attempt1_bg'
+                                >
+                                    <input
+                                        type="number"
+                                        name = 'attempt1'
+                                        id='attempt1'
+                                        placeholder="Attempt 1"
+                                        class="text-center text-black rounded"
+                                        max = "999999999999999999"
+                                        disabled
+                                    />
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            class="col-md-2 mt-4 d-flex justify-content-center align-items-center"
+                        ></div>
+                        <!-- ATTEMPT 2 -->
+                        <div class="col-12 col-md-5 mt-3" id =  >
+                            <ul class="list-group box-shadow mt-6res">
+                                <li
+                                    class="list-group-item text-white d-flex justify-content-center align-items-center"  id = 'attempt2_bg'
+                                >
+                                    <input
+                                        type="number"
+                                        placeholder="Attempt 2"
+                                        name = 'attempt2'
+                                        id='attempt2'
+                                        class="text-center text-black rounded"
+                                        max = "999999999999999999"
+                                        disabled
+
+                                    />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- SUBMIT BUTTON -->
+                    <div
+                        class="row d-flex justify-content-center align-content-center mb-5 mt-4"
+                    >
+                            <button
+                            type="submit"
+                            class="custom-btn bg-heading box-shadow mt-6res heading-text"
+                            value = 'Submit' name = 'submit' id = 'submit'
+                            onclick="myFunc(this)"
+                            >
+                                Submit
+                            </button>
+                    </div>
+                    </form>
+                </div>
+                <!-- RIGHT COLUMN -->
+                <div class="col-12 col-md-3 d-flex flex-column">
+                    <!-- INSTRUCTION -->
+                    <div class="d-flex justify-content-center mt-6 mb-res">
+                        <button
+                            type="button"
+                            class="custom-btn-2 btn-block instruction"
+                            data-target="#instruction"
+                            data-toggle="modal"
+                        >
+                            Instructions
+                            <div class="custom-btn-2__horizontal"></div>
+                            <div class="custom-btn-2__vertical"></div>
+                        </button>
+                    </div>
+                    <!-- HINTS -->
+                    <div class="d-flex justify-content-center mt-6">
+                        <button
+                            type="button"
+                            class="custom-btn-2 btn-block hint"
+                            data-target="#hint"
+                            data-toggle="modal"
+                        >
+                            Hints
+                            <div class="custom-btn-2__horizontal"></div>
+                            <div class="custom-btn-2__vertical"></div>
+                        </button>
+                    </div>
+                    <!-- MARKING SCHEME -->
+                    <div class="d-flex justify-content-center mt-6 mttt mb-6">
+                        <div class="card score bg-dark box-shadow">
+                            <h5
+                                class="card-header bg-heading text-white text-center heading-text"
+                            >
+                                Marking Scheme
+                            </h5>
+                            <div
+                                class="card-body text-white"
+                                style="height: 60px"
+                            >
+                                <div
+                                    class="row d-flex"
+                                    style="margin-top: -5px"
+                                >
+                                    <div
+                                        class="col d-flex align-items-center justify-content-center"
+                                    >
+                                        <div class="text-center number-text">
+                                            {{ positive_marks }}
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col d-flex align-items-center justify-content-center"
+                                    >
+                                        <div
+                                            class="score-number text-center number-text"
+                                        >
+                                            {{ negative_marks }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- QUESTIONS ATTEMPTED -->
+                    <div
+                        class="d-flex justify-content-center mt-6 mtt mbb mb-6"
+                        style="height: 59px"
+                    >
+                        <div
+                            class="container text-white box-shadow score rounded d-flex other-containers"
+                        >
+                            <div
+                                class="col d-flex bg-heading align-items-center justify-content-center"
+                            >
+                                <div class="text-center heading-text">
+                                    Questions Attempted
+                                </div>
+                            </div>
+                            <div
+                                class="col d-flex bg-dark align-items-center justify-content-center"
+                            >
+                                <div
+                                    class="score-number text-center number-text"
+                                >
+                                    {{ sr}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <footer class="text-center fixed-bottom">
+            <div class="conatiner-fluid">
+                <div class="footer-text text-white pt-3 pb-4">
+                    &copy PICT IEEE Student Branch<span></span>
+                </div>
+            </div>
+        </footer>
+
+        <!-- MODALS -->
+        <!-- INSTRUCTION MODAL -->
+        <div
+            class="modal fade"
+            id="instruction"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Instructions: </h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul
+                        class="a"
+                        style="font-size: 15px; padding-left: 2%; text-align: left"
+                        >
+                            <p>1. The competition is of 28 minutes.</p>
+                            <p>
+                                2. The question put in front of you has only ONE INTEGER
+                                answer.
+                            </p>
+                            <p>3. You will only proceed if you attempt the question.</p>
+                            <p>4. You will have 2 attempts to answer the question.</p>
+                            <p>
+                                5. The attempts will carry marks given in the marking scheme
+                                i.e. the first attempt will have a marking scheme of +4,0
+                                and the second attempt has marking scheme of +2,-1.
+                            </p>
+                            <p>
+                                6. You can log out of the competition any time you want
+                                through the LOGOUT button.
+                            </p>
+                            <p>
+                                7. You will be given 3 LIFELINES which are explained below.
+                            </p>
+                        </ul>
+                        <h4>LIFELINE 1: EXTRA TIME</h4>
+                        <p>
+                        At the end of 28 minutes if your score is greater than or
+                        equal to 12 you can buy time using your score as a currency.
+                        There will be no change in the marking scheme. But you won't
+                        be able to use the other two lifelines in this extra time.
+                        </p>
+                        <h4>LIFELINE 2: HOT AND COLD</h4>
+                        <p>
+                        The lifeline can only be used when your Attempt 1 is
+                        incorrect. This lifeline will tell you if Attempt 1 was close
+                        to the correct answer or not (± 5%). If Attempt 1 is close to
+                        the correct answer then the verdict will be HOT else it will
+                        be COLD. The marking scheme for the particular question will
+                        be changed to +8 -8.
+                        </p>
+                        <h4>LIFELINE 3: VISION</h4>
+                        <p>
+                        The lifeline can only be used when your Attempt 1 is
+                        incorrect. This lifeline will tell you the number of digits in
+                        Attempt 1 that corresponds with the actual correct answer. The
+                        marking scheme for the particular question will be changed to
+                        +8 -8.
+                        </p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-danger"
+                            data-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HINTS MODAL -->
+        <div
+            class="modal fade"
+            id="hint"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Hints</h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        1) PERFECT NUMBER is a positive integer that is equal to the sum of its proper divisors.The smallest perfect number is 6,which is the sum of 1,2 and 3.<br><br>
+                                2) A number n is called deficient if the sum of its proper divisors is less than n and it is called abundant if this sum exceeds n.<br><br>
+                                3) FIBONACCI NUMBERS is a series of numbers in which each number (Fibonacci Number) is the sum of the two preceding numbers.The Simplest Form is the series 0 , 1 , 1 , 2 , 3 , 5 , 8 , ....<br><br>
+                                4) PASCAL'S Triangle is a triangle which is denoted as follows:<br>
+                                <div style="text-align:center">
+                                1 <br>
+                                1 1<br>
+1 2 1<br>
+1 3 3 1<br>
+                                </div>
+<br>
+5) A PALINDROMIC NUMBER or NUMERAL PALINDROME is a number that remains the same when its digits are reverse.Like 16461, for example, it is "symmetrical".<br><br>
+6) AMICABLE NUMBER:A pair of numbers,each of which is the sum of the factors of the other. (e.g. 220 & 284.)<br><br>
+7)Armstrong number:A n number n is called armstrong number if the sum of the cube of its individual digits is equal to the number itself.eg:153 :1^3+5^3+3^3=153<br><br>
+8)A Harshad number is a number that is divisible by the sum of its own digits.For example, 1729 is a Harshad number because 1 + 7 + 2 + 9 = 19 and 1729 = 19 × 91<br><br>
+9)A number is called curious if it is equal to the sum of factorials of its digits.For example,145 is a curious number, as 1! + 4! + 5! = 1 + 24 + 120 = 145.<br><br>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-danger"
+                            data-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOGOUT MODAL -->
+        <div
+            class="modal fade"
+            id="logout"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Logout</h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to Logout ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <form method = 'post' action = '{% url "logout" %}'>
+                            {% csrf_token %}
+                        <button type="submit" class="logout btn btn-success" value = 'Logout' name = 'submit'>
+                            Logout
+                        </button>
+                            </form>
+                        <button
+                            type="button"
+                            class="btn btn-danger"
+                            data-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="openModal" style="display: none;" data-toggle="modal" data-backdrop="static" data-target="#extratime"></button>
+
+        <!-- LIFELINE MODAL -->
+        <div
+            class="modal fade"
+            id="extratime"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-center">
+                        <h5 class="modal-title">Extra Time</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div id="message1">
+                             <form class="" action="{% url 'extra_time' %}" method="post">
+                                {% csrf_token %}
+                                <div class="form-check mb-2">
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="user_response"
+                                        id="5for1"
+                                        value="300"
+                                    />
+                                    <label
+                                        class="form-check-label text-monospace"
+                                        for="5for1"
+                                    >
+                                        5 minutes for 1 point
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="user_response"
+                                        id="10for2"
+                                        value="600"
+                                    />
+                                    <label
+                                        class="form-check-label text-monospace"
+                                        for="10for2"
+                                    >
+                                        10 minutes for 2 point
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="user_response"
+                                        id="15for3"
+                                        value="900"
+                                    />
+                                    <label
+                                        class="form-check-label text-monospace"
+                                        for="15for3"
+                                    >
+                                        15 minutes for 3 point
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="user_response"
+                                        id="logout_user"
+                                        value="logout_user"
+                                    />
+                                    <label
+                                        class="form-check-label text-monospace"
+                                        for="logout"
+                                    >
+                                        Logout
+                                    </label>
+                                </div>
+                                <div class="mt-5 d-flex justify-content-center">
+                                    <button
+                                        type="submit"
+                                        name="submit"
+                                        class="btn btn-block text-white lifeline-btn"
+                                        style="
+                                            font-size: 16px;
+                                            text-transform: uppercase;
+                                            letter-spacing: 2px;
+                                        "
+                                    >
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+
+        <script src="{% static 'js/app.js' %}"></script>
+        <script src="{% static 'js/circle.js' %}"></script>
+
+        <!--script
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script-->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"
+        ></script>
+        <script type="text/javascript">
+            const verdict = "{{ lifeline_message }}";
+if (verdict && verdict === 'HOT') {
+  alertHot.classList.remove('d-none');
+  alertHot.classList.remove('alert-success');
+  alertHot.classList.add('alert-danger');
+  qContainer.classList.remove('mt-5');
+} else if (verdict && verdict === 'COLD') {
+  alertHot.classList.remove('d-none');
+  alertHot.classList.remove('alert-success');
+  alertHot.classList.add('alert-primary');
+  qContainer.classList.remove('mt-5');
+} else if (verdict) {
+  alertHot.classList.remove('d-none');
+  qContainer.classList.remove('mt-5');
+} else {
+  qContainer.classList.add('mt-5');
+}
+        </script>
+        <script>
+            $('body').bind('copy paste cut drag drop', function (e) {
+                e.preventDefault();
+            });
+        </script>
+        <script type="text/javascript">
+
+        if({{ extra_time_window }} == 1) {
+        $('#modal').show();
+            }
+        else if ( {{ extra_time_window }} == 0) {
+        $('#modal').hide();
+            }
+        if ({{ extra_time }} == 1) {
+        document.getElementById("hot_or_cold").disabled = true;
+        document.getElementById("vision").disabled = true;
+        document.getElementById("hot_or_cold").style.cursor = "not-allowed";
+        document.getElementById("vision").style.cursor = "not-allowed";
+        $('#progress_div').hide();
+        }
+        if({{ progress }} < 100) {
+            document.getElementById("hot_or_cold").disabled = true;
+            document.getElementById("hot_or_cold").style.cursor = "not-allowed";
+            document.getElementById("vision").disabled = true;
+            document.getElementById("vision").style.cursor = "not-allowed";
+            }
+        if({{abc}}==0){
+            let store= document.getElementById("attempt1").value;
+            document.getElementById('attempt1').removeAttribute('disabled');
+            document.getElementById("attempt1").required = true;
+            document.getElementById("attempt2").style.cursor = "not-allowed";
+            document.getElementById("attempt2").style.backgroundColor = "#b6bdd0";
+            document.getElementById("attempt2_bg").style.backgroundColor = "#b6bdd0";
+            document.getElementById("hot_or_cold").disabled = true;
+            document.getElementById("hot_or_cold").style.cursor = "not-allowed";
+            document.getElementById("vision").disabled = true;
+            document.getElementById("vision").style.cursor = "not-allowed";
+            }
+        else if({{abc}}==1){
+            let val= {{attempt1}}
+            document.getElementById("attempt1").value = val;
+            document.getElementById('attempt2').removeAttribute('disabled');
+            document.getElementById("attempt2").required = true;
+            document.getElementById("attempt1").style.borderColor = "red";
+            document.getElementById("attempt1").style.backgroundColor = "#b6bdd0";
+            document.getElementById("attempt1_bg").style.backgroundColor = "#b6bdd0";
+            document.getElementById("attempt1").style.cursor = "not-allowed";
+        }
+    </script>
+    </body>
+</html>
+<!-- REUSABLE COMPONENTS -->
+<!-- <ul class="list-group">
+                    <li class="list-group-item text-black">Lifelines</li>
+                    <li class="list-group-item">Progress Bar</li>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        Hot and Cold
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        Vision
+                    </button>
+                </ul> -->
+
+<!-- <div class="container d-flex justify-content-center">
+                        <div class="flex-fill">SCORE</div>
+                        <div class="flex-fill">30</div>
+                    </div>
+                </div> -->
+<!-- <div class="card" >
+    <div class="card-body">
+        <div class="row">
+            <div class="col-6 text-center border-right">
+                <p>SCORE</p>
+            </div>
+            <div class="col-6 text-center">
+                <p>30</p>
+            </div>
+        </div>
+    </div>
+</div> -->

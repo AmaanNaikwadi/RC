@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" type="text/css" href="https://fontawesome.com/v4.7.0/icon/times">
+        <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'css/bodycss.css' %}">
+    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <title>Log In</title>
+    <script type = 'text/javascript'>
+            window.history.forward();
+            function noBack() {
+            window.history.forward();
+            }
+    </script>
+</head>
+<body onload="noBack();" onpageshow = "if (event.persisted) noBack();" onunload = "">
+    <nav class="navbar navbar-expand-sm navbar-light justify-content-right nbt navbar-dark bg-dark">
+        <img class="rc" src="{% static 'img/RC_logo.jpeg' %}">
+        <img class="rc1" src="{% static 'img/logo-cakesoft-2.png' %}">
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav ">
+            <li class="nav-item ">
+              <a class="nav-link no1 to" href="#" ></a>
+            </li>
+          </ul>
+        </div>
+        <img class="cl justify-content-end" src="{% static 'img/logo_pisb_2.png' %}">
+
+        <!-- Modal -->
+        <button id="openModal" data-toggle="modal" data-backdrop="false" data-target="#staticBackdrop" style="display: none;"></button>
+               <div class="modal fade" id="staticBackdrop" data-backdrop="false" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog ">
+                    <div class="modal-content">
+                      <div class="modal-header warn">
+                        <h4 class="modal-title " id="staticBackdropLabel">Warning! <br> {{ message }}</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    </nav>
+
+    <div id="particles-js"></div>
+    <div class="container">
+    <form method ="post" action = '{% url "signin" %}' class="login-form fade-in col-10 col-md-6">
+        {% csrf_token %}
+        <div class="box">Reverse Coding</div>
+        <div class="ver" id = 'message1'></div>
+        <div class="left">
+        <input type="username" name="username" id="username" placeholder="&#xf2c0 Username" autocomplete="off" required class="fade-in one">
+        <input type="password" name="password" id="password" placeholder="&#xf084 Password" required class="fade-in two mb-0">
+        <div class="form-grp">
+          <input type="radio" id="fe" name="level" value="fe" class="buton" required="required" checked="checked">
+          <label for="Junior" style="font-size: 20px;margin-bottom: 2%;color:white;margin-right:0.5vh; font-weight:normal;">FE</label>
+
+          <input type="radio" id="se" name="level" value="se" class="buton">
+          <label for="Junior" style="font-size: 20px;margin-bottom: 2%;color:white;margin-right:0.5vh; font-weight:normal;">SE</label>
+
+          <!-- <input type="radio" id="te" name="level" value="te" class="buton" required="required" checked="checked">
+          <label for="Senior" style="font-size: 20px;margin-bottom: 2%;color:white;margin-right:0.5vh; font-weight:normal;">TE</label>
+          <input type="radio" id="be" name="level" value="be" class="buton">
+          <label for="Senior" style="font-size: 20px;margin-bottom: 2%;color:white;margin-right:0.5vh; font-weight:normal;">BE</label> -->
+
+      </div>
+
+        <!--input type="email" name="email" id="email" placeholder="&#xf003 E-Mail" autocomplete = "off" required class="fade-in three"-->
+        <div class="fade-in four" style="margin-top: 4%;">
+          <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <button class="btn1 fade-in four" type="submit">Submit</button>
+            </a>
+        </div>
+        </div>
+
+
+    </form>
+
+    <div class="limg fade-in">
+        <label class="whole"><img class="cred" src="{% static 'img/clive.png' %}"><p class="stxt">presents</p></label>
+        <p class="en">REVERSE CODING</p>
+
+    </div>
+    </div>
+    <div class="pad" style="padding:1%;"></div>
+        <nav class="navbar navbar-expand-lg justify-content-center navbar-dark bg-dark fixed-bottom nb ">
+            <div class="navbar-brand mc-auto nt"> <a href = '{% url "signup" %}'>SignUp Here</a> | &copy PICT IEEE Student Branch | Meet <a href="{% url 'team' %}" class="ot">Our Team</a></div>
+            <!--div class="navbar-brand mc-auto nt"> <a href = '{% url "signup" %}'>SignUp Here First</a></div-->
+      </nav>
+
+
+    <script type="text/javascript" src="{% static 'js/particles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/app_login.js' %}"></script>
+    <script type="text/javascript">
+        if ({{ wrong_credentials }} == 1) {
+            document.getElementById('openModal').click();
+        }
+    </script>
+<!--script>
+        $(document).ready(function() {
+            $('input#username').keyup(function(e) {
+                let name = $(this).val();
+                $.ajax({
+                    method: 'GET',
+                    url: 'signin_validation/',
+                    dataType: 'json',
+                    data : {
+                        'name':name
+                    },
+                    success: function(data) {
+                        if(data.is_same) {
+                            $('#message1').html("<h10 style='color:#7fff00;'>User Found</h10>");
+                            $('#submit').prop("disabled", false);
+                        } else {
+                            $('#message1').html("<h10 style='color:red;'>User Not Found</h10>");
+                            $('#submit').prop("disabled", true);
+                        }
+                    },
+                });
+            });
+        });
+    </script-->
+
+</body>
+</html>

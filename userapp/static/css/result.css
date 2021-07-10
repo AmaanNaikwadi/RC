@@ -1,0 +1,2873 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+ body{
+    margin:0;
+    padding:0;
+    background: #262626 ;
+
+    font-size: 17px;
+ }
+
+ li a {
+  font-size: 125% !important;
+  font-weight: 300;
+}
+
+/* FOOTER SECTION */
+footer {
+  background-color: #343a40;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+
+
+  .fixed-bottom {
+    position: relative !important;
+  }
+}
+#sponsers{
+  height: 71vh;
+  margin-top: 5.7vh;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left: 3.4vw;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.5vh;
+  padding-top: 0.6vh;
+
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.5vh;
+   padding-top: 0.6vh;
+
+}
+span.mdi{
+  color: #30E7ED;
+   font-size:4.5rem;
+}
+
+i.far {
+   color: #30E7ED;
+   font-size:3.9rem;
+
+}
+i.ui{
+  font-size:3.7rem;
+
+}
+i.fas{
+   color: #30E7ED;
+   font-size:3.7rem;
+}
+
+#maincol{
+  height: 82.2vh;
+  margin-top: 6.3vh;
+
+}
+#clashinfo{
+  height: 71vh;
+  margin-top: 5.7vh;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left:1.6vw;
+}
+p{
+  margin-left: 1vw;
+}
+
+@media (min-width: 700px){
+  body {
+  font-family: 'Roboto', sans-serif;
+  background: #262626 ;
+  overflow-y: hidden;
+
+}
+}
+@media (max-width: 426px){
+#sponsers{
+  height: 52vh;
+  margin-left: 16.9vw;
+}
+#clashinfo{
+  height: 52vh;
+  margin-top: 4vh;
+  margin-left: 16.9vw;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+}
+.boxnum{
+
+  color: #30E7ED;
+  font-size: 2rem;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+
+}
+.scorenum{
+  color: #30E7ED;
+  font-size: 2rem;
+  margin-top: 2.4vh;
+  padding-top: 0vh;
+}
+#box1{
+  height: 25vh;
+  margin-left: 6.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 59vw;
+  margin-top: 3vh;
+
+}
+#userbox{
+  height: 25vh;
+  margin-left: 6.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 59vw;
+  margin-top: -1vh;
+
+}
+span.mdi{
+  display: none;
+  height: 0vh;
+  width: 0vw;
+}
+
+i.far {
+  display: none;
+  height: 0vh;
+  width: 0vw;
+}
+i.ui{
+  display: none;
+  height: 0vh;
+  width: 0vw;
+
+}
+i.fas{
+  display: none;
+  height: 0vh;
+  width: 0vw;
+}
+#box4title{
+  display: none;
+  height: 0vh;
+  width: 0vw;
+
+}
+#box5title{
+  display: none;
+  height: 0vh;
+  width: 0vw;
+}
+#box6title{
+ display: none;
+  height: 0vh;
+  width: 0vw;
+
+
+}
+#box7title{
+   display: none;
+  height: 0vh;
+  width: 0vw;
+}
+.boxnumdesktop{
+ display: none;
+  height: 0vh;
+  width: 0vw;
+}
+
+
+.boxnum2desktop{
+  display: none;
+  height: 0vh;
+  width: 0vw;
+}
+#eyebox{
+   display: none;
+  height: 0vh;
+  width: 0vw;
+}
+#sclera {
+ display: none;
+ width: 0vw;
+ height: 0vh;
+}
+
+/*position: absolute margin: 50px to center iris in the middle of the sclera*/
+#iris {
+display: none;
+ width: 0vw;
+ height: 0vh;
+}
+
+/*position: absolute margin: 25px half of iris to center pupil in the middle of the iris*/
+#pupil {
+ display: none;
+ width: 0vw;
+ height: 0vh;
+}
+
+
+#eyeLib {
+display: none;
+ width: 0vw;
+ height: 0vh;
+}
+
+
+#userboxtitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+}
+.username{
+  color: #30E7ED;
+  font-size: 2rem;
+  margin-top: 2.4vh;
+  padding-top: 0vh;
+}
+#box1title{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+
+}
+#box2{
+  height: 25vh;
+  margin-left: 7vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box2title{
+  height: 8vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  font-size: 0.75rem;
+
+}
+#box3{
+  height: 25vh;
+  margin-left: 2.9vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box3title{
+  height: 8vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  padding-top: 0vh;
+  font-size: 0.75rem;
+
+}
+#usericon{
+  display: none;
+  height: 0vh;
+  width: 0vw;
+}
+
+#maincol{
+  margin-top: 8vh;
+  margin-left: 13vw;
+}
+
+
+footer{
+  margin-top: 9.5vh;
+}
+}
+@media (max-width: 415px){
+#sponsers{
+  height: 52vh;
+  margin-left: 16.9vw;
+}
+#clashinfo{
+  height: 52vh;
+  margin-top: 4.5vh;
+  margin-left: 16.9vw;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+  font-size: 1.5rem;
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+   font-size: 1.5rem;
+}
+.boxnum{
+
+  color: #30E7ED;
+  font-size: 2.2rem;
+  margin-top: 1.7vh;
+  padding-top: 1vh;
+
+}
+.scorenum{
+  color: #30E7ED;
+  font-size: 3rem;
+  margin-top: 2.4vh;
+  padding-top: 0vh;
+}
+#box1{
+  height: 25vh;
+  margin-left: 6.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 59vw;
+  margin-top: 3vh;
+
+}
+#userbox{
+  height: 25vh;
+  margin-left: 6.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 59vw;
+  margin-top: -1vh;
+
+}
+#userboxtitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+  font-size: 1.5rem;
+}
+.username{
+  color: #30E7ED;
+  font-size: 2.2rem;
+  margin-top: 2.4vh;
+  padding-top: 1vh;
+}
+#box1title{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+  font-size: 1.5rem;
+
+}
+#box2{
+  height: 23vh;
+  margin-left: 7vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box2title{
+  height: 8vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  font-size: 0.75rem;
+  padding-top: 1vh;
+
+}
+#box3{
+  height: 23vh;
+  margin-left: 2.9vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box3title{
+  height: 8vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+
+  font-size: 0.75rem;
+  padding-top: 1vh;
+
+}
+p{
+  font-size: 1.2rem;
+  padding-left: 1vw;
+}
+
+#maincol{
+  margin-top: 9vh;
+}
+
+
+footer{
+  margin-top: 6vh;
+}
+}
+@media (max-width: 412px){
+#sponsers{
+  height: 52vh;
+  margin-left: 16.9vw;
+}
+#clashinfo{
+  height: 52vh;
+  margin-top: 3.5vh;
+  margin-left: 16.9vw;
+}
+#box1{
+  height: 25vh;
+  margin-left: 6.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 59vw;
+
+}
+#box1title{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+  font-size: 1.5rem;
+
+}
+#box2{
+  height: 23vh;
+  margin-left: 7vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box2title{
+  height: 8vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  font-size: 0.75rem;
+  padding-top: 1vh;
+
+}
+#box3{
+  height: 23vh;
+  margin-left: 2vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box3title{
+  height: 8vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  padding-top: 1vh;
+  font-size: 0.75rem;
+
+}
+.scorenum{
+  color: #30E7ED;
+  font-size: 3rem;
+  margin-top: 2.4vh;
+  padding-top: 0vh;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+  font-size: 1.5rem;
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+   font-size: 1.5rem;
+}
+#userbox{
+  height: 25vh;
+  margin-left: 6.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 59vw;
+  margin-top: -1vh;
+
+}
+#userboxtitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+  font-size: 1.5rem;
+}
+.username{
+  color: #30E7ED;
+  font-size: 2rem;
+  margin-top: 2.4vh;
+  padding-top: 0vh;
+}
+p{
+  font-size: 1.2rem;
+  padding-left: 1vw;
+}
+
+#maincol{
+  margin-top: 9vh;
+}
+
+
+footer{
+  margin-top: 6vh;
+}
+}
+@media (max-width: 385px){
+#sponsers{
+  height: 55vh;
+}
+#clashinfo{
+  height: 55vh;
+  margin-top: 4.2vh;
+}
+
+
+.cell {
+   position:absolute;
+   border-radius:79.5%;
+   width:79.5px;
+   height:79.5px;
+   background-color:#262626;
+   border:2px solid #30E7ED ;
+   line-height:19px;
+   text-align:center;
+   padding-top: 1.6vh;
+}
+#box1{
+  height: 25vh;
+  margin-left: 6.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 59vw;
+
+}
+#box1title{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+
+  font-size: 1.4rem;
+
+}
+#box2{
+  height: 23vh;
+  margin-left: 7vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box2title{
+  height: 8vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  font-size: 0.75rem;
+
+}
+#box3{
+  height: 23vh;
+  margin-left: 2vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box3title{
+  height: 8vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  padding-top: 0vh;
+  font-size: 0.75rem;
+}
+#userboxtitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.5vh;
+
+  font-size: 1.4rem;
+
+}
+.username{
+  color: #30E7ED;
+  font-size: 1.8rem;
+  margin-top: 3.5vh;
+  padding-top: 0vh;
+  overflow-x: auto;
+}
+.scorenum{
+  font-size: 3rem;
+  margin-top: 1.5vh;
+}
+}
+
+@media (max-width: 376px){
+#sponsers{
+  height: 55vh;
+}
+#clashinfo{
+  height: 55vh;
+  margin-top: 4.3vh;
+}
+#sponsortitle{
+  height: 9vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+}
+#clashtitleinfo{
+  height: 9vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+}
+#box1{
+  height: 25vh;
+  margin-left: 6.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 59vw;
+
+}
+#box1title{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+  font-size: 1.1rem;
+
+
+}
+#box2{
+  height: 23vh;
+  margin-left: 7vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box2title{
+  height: 8vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  font-size: 0.75rem;
+  padding-top: 0vh;
+
+}
+#box3{
+  height: 23vh;
+  margin-left: 2.2vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box3title{
+  height: 8vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  font-size: 0.75rem;
+
+}
+#userboxtitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.5vh;
+
+  font-size: 1.1rem;
+
+}
+.username{
+  color: #30E7ED;
+  font-size: 1.5rem;
+  margin-top: 3.5vh;
+  padding-top: 0vh;
+  overflow-x: auto;
+}
+.boxnum{
+  font-size: 1.5rem;
+}
+.scorenum{
+  font-size: 2.5rem;
+  margin-top: 1.5vh;
+}
+}
+
+@media (max-width: 361px){
+#sponsers{
+  height: 55vh;
+}
+#clashinfo{
+  height: 55vh;
+  margin-top: 4.3vh;
+}
+#sponsortitle{
+  height: 9vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+}
+#clashtitleinfo{
+  height: 9vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+}
+#box1{
+  height: 25vh;
+  margin-left: 6.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 59vw;
+
+}
+#box1title{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.5vh;
+  padding-top: 0vh;
+  font-size: 1.4rem;
+
+}
+#box2{
+  height: 23vh;
+  margin-left: 7vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box2title{
+  height: 8vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  font-size: 0.7rem;
+  padding-top: 0.8vh;
+
+
+}
+.boxnum{
+
+  color: #30E7ED;
+  font-size: 2rem;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+
+}
+#box3{
+  height: 23vh;
+  margin-left: 2.2vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box3title{
+  height: 8vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  padding-top: 0vh;
+  font-size: 0.7rem;
+  padding-top: 0.8vh;
+
+}
+#userbox{
+  height: 25vh;
+  margin-left: 6.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 59vw;
+  margin-top: -1vh;
+
+}
+#userboxtitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.5vh;
+
+  font-size: 1.4rem;
+
+}
+.username{
+  color: #30E7ED;
+  font-size: 1.8rem;
+  margin-top: 3.5vh;
+  padding-top: 0vh;
+  overflow-x: auto;
+}
+.scorenum{
+  font-size: 3rem;
+  margin-top: 1.5vh;
+}
+}
+@media (max-width: 321px){
+#sponsers{
+  height: 55vh;
+}
+#clashinfo{
+  height: 55vh;
+  margin-top: 3.9vh;
+}
+
+#maincol{
+  margin-left: 12.7vw;
+}
+
+
+#box1{
+  height: 25vh;
+  margin-left: 6.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 59vw;
+
+}
+#box1title{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+  font-size: 1.1rem;
+
+}
+#box2{
+  height: 23vh;
+  margin-left: 7vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box2title{
+  height: 9vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  font-size: 0.68rem;
+  padding-top: 0.7vh;
+  padding-left: 1.9vw;
+
+}
+#box3{
+  height: 23vh;
+  margin-left: 2.2vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: 3vh;
+
+}
+#box3title{
+  height: 9vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1vh;
+  padding-top: 0.7vh;
+  font-size: 0.68rem;
+  padding-left: 1.9vw;
+
+
+}
+.boxnum{
+
+  color: #30E7ED;
+  font-size: 2rem;
+  margin-top: 1.1vh;
+  padding-top: 0vh;
+
+}
+#userbox{
+  height: 25vh;
+  margin-left: 6.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 59vw;
+  margin-top: -1vh;
+
+}
+#userboxtitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.7vh;
+  padding-top: 0vh;
+  font-size: 1.1rem;
+}
+
+.username{
+  color: #30E7ED;
+  font-size: 1.5rem;
+  margin-top: 2.4vh;
+  padding-top: 1vh;
+}
+.scorenum{
+  color: #30E7ED;
+  font-size: 2rem;
+  margin-top: 2.4vh;
+  padding-top: 0vh;
+}
+
+}
+@media (min-width: 768px) {
+#box1{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box1title{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box2{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box2title{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box3{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box3title{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+
+#userbox{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+
+
+@media (min-width: 767px){
+  #sponsers{
+  height: 71vh;
+  margin-top: 8.7vh;
+  border: 3px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left: 3.4vw;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:3px #30E7ED solid;
+  margin-top: 1.5vh;
+
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:3px #30E7ED solid;
+  margin-top: 1.5vh;
+
+}
+#maincol{
+  height: 82.2vh;
+  margin-top: 8.7vh;
+
+}
+#clashinfo{
+  height: 71vh;
+  margin-top: 8.7vh;
+  border: 3px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left:1.6vw;
+}
+p{
+  margin-left: 1vw;
+}
+span.mdi{
+  color: #30E7ED;
+   font-size:4rem;
+}
+
+i.far {
+   color: #30E7ED;
+   font-size:3.4rem;
+
+}
+i.ui{
+  font-size:3.2rem;
+
+}
+i.fas{
+   color: #30E7ED;
+   font-size:3.2rem;
+}
+
+
+#box4{
+  height: 21vh;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  width: 52vw;
+  margin-top: -4.5vh;
+  margin-left: 4vw;
+}
+
+#box5{
+  height: 21vh;
+  margin-left: 12.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  width: 52vw;
+  margin-top: -4.5vh;
+}
+
+#box6{
+  height: 21vh;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  width: 52vw;
+  margin-top: 1vh;
+  margin-left: 4vw;
+}
+
+#box7{
+  height: 21vh;
+  margin-left: 12.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  width: 52vw;
+  margin-top: 1vh;
+}
+#box4title{
+  height: 11.8vh;
+  color: #30E7ED;
+
+  margin-top: 1vh;
+  font-size: 1.2rem;
+  padding-top: 9vh;
+  margin-bottom: 2vh;
+
+}
+#box5title{
+ height: 11.8vh;
+ color: #30E7ED;
+ margin-top: 1vh;
+ font-size: 1.2rem;
+ padding-top: 4.7vh;
+ margin-bottom: -2.2vh;
+
+}
+#box6title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1rem;
+  padding-top: 4.2vh;
+
+
+}
+#box7title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1rem;
+  padding-top: 4.2vh;
+
+}
+.boxnumdesktop{
+ color: #30E7ED;
+  font-size: 1.2rem;
+  margin-top: 0.2vh;
+}
+
+
+.boxnum2desktop{
+ color: #30E7ED;
+ font-size: 1.5rem;
+
+  margin-top: 0vh;
+}
+#box4box5box{
+margin-top: 6vh;
+
+}
+#box6box7box{
+margin-top: 0vh;
+
+}
+.circle {
+  position: relative;
+  top: -30px;
+  margin: 0 auto -75px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color:#262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+}
+#usericon{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: 0vh;
+
+}
+#eyebox{
+  height: 26vh;
+  margin-left: 17.1vw;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: -5vh;
+  overflow-y: hidden;
+}
+/*work in progress - add second eye maybe, maybe not*/
+
+
+/*center cirlce with display: block and margin: auto*/
+#sclera {
+  background-color: white;
+  border-radius: 100px;
+  height: 100px;
+  width:100px;
+  display: block;
+  margin:auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+
+  border-radius:75% 0;
+  overflow: hidden;
+}
+
+/*position: absolute margin: 50px to center iris in the middle of the sclera*/
+#iris {
+  background-color: #30E7ED;
+  border-radius: 100px;
+  height:50px;
+  width: 50px;
+  display: block;
+  margin: 26px;
+  position: absolute;
+  opacity: .9;
+}
+
+/*position: absolute margin: 25px half of iris to center pupil in the middle of the iris*/
+#pupil {
+  background-color: #000000;
+  border-radius: 100px;
+  height: 20px;
+  width: 20px;
+  display: block;
+  margin: 15px;
+  position: absolute;
+}
+
+#eyeLib {
+  background-color: #262626;
+  position: absolute;
+  margin-top: -100px;
+  margin-left: -140px;
+  animation-name: blink;
+  animation-duration: 6s ;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+  transform:  rotate(-45deg);
+}
+
+@keyframes blink {
+  0% {height: 0px; width:260px;}
+  50% {height: 240px; width:260px;}
+  100% {height: 0px; width: 260px;}
+}
+.glow{
+  color: #262626;
+  text-align: center;
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation:glow 3s ease-in-out infinite alternate ;
+  animation: glow 3s ease-in-out infinite alternate ;
+}
+ @-webkit-keyframes glow{
+  from {
+    text-shadow: 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #30E7ED, 0 0 3px #30E7ED, 0 0 4px #30E7ED, 0 0 5px #30E7ED, 0 0 6px #30E7ED ;
+
+  }
+   top{
+    text-shadow: 0 0 0px #30E7ED, 0 0 2px , 0 0 4px #30E7ED, 0 0 6px #30E7ED, 0 0 8px #30E7ED, 0 0 10px #30E7ED, 0 0 px #30E7ED;
+   }
+
+  }
+
+
+@media (min-width: 1000px){
+  #sponsers{
+  height: 65vh;
+  margin-top: 7.9vh;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left: 3.4vw;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.5vh;
+
+}
+#box1{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box1title{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box2{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box2title{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box3{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box3title{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.5vh;
+
+}
+#maincol{
+  height: 82.2vh;
+  margin-top: 8.3vh;
+
+}
+#clashinfo{
+  height: 65vh;
+  margin-top: 7.9vh;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left:1.6vw;
+}
+p{
+  margin-left: 1vw;
+}
+
+}
+@media (min-width: 1023px){
+  #sponsers{
+  height: 71vh;
+  margin-top: 5.7vh;
+  border: 3px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left: 3.4vw;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:3px #30E7ED solid;
+  margin-top: 1.5vh;
+
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:3px #30E7ED solid;
+  margin-top: 1.5vh;
+
+}
+#maincol{
+  height: 82.2vh;
+  margin-top: 6.3vh;
+
+}
+#clashinfo{
+  height: 71vh;
+  margin-top: 5.7vh;
+  border: 3px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left:1.6vw;
+}
+p{
+  margin-left: 1vw;
+}
+
+
+
+#box4{
+  height: 21vh;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  width: 52vw;
+  margin-top: -4.5vh;
+  margin-left: 4vw;
+}
+
+#box5{
+  height: 21vh;
+  margin-left: 12.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  width: 52vw;
+  margin-top: -4.5vh;
+}
+
+#box6{
+  height: 21vh;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  width: 52vw;
+  margin-top: 1vh;
+  margin-left: 4vw;
+}
+span.mdi{
+  color: #30E7ED;
+   font-size:4.3rem;
+}
+
+i.far {
+   color: #30E7ED;
+   font-size:3.7rem;
+
+}
+i.ui{
+  font-size:3.2rem;
+
+}
+i.fas{
+   color: #30E7ED;
+   font-size:3.2rem;
+}
+
+
+#box7{
+  height: 21vh;
+  margin-left: 12.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  width: 52vw;
+  margin-top: 1vh;
+}
+#box4title{
+  height: 11.8vh;
+  color: #30E7ED;
+
+  margin-top: 1vh;
+  font-size: 1.3rem;
+  padding-top: 6.6vh;
+  margin-bottom: -0.5vh;
+
+}
+#box5title{
+ height: 11.8vh;
+ color: #30E7ED;
+ margin-top: 1vh;
+ font-size: 1.3rem;
+ padding-top: 4.7vh;
+ margin-bottom: -2.2vh;
+
+}
+#box6title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1.1rem;
+  padding-top: 4.2vh;
+
+
+}
+#box7title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1.1rem;
+  padding-top: 4.2vh;
+
+}
+.boxnumdesktop{
+ color: #30E7ED;
+  font-size: 1.5rem;
+  margin-top: 0.3vh;
+}
+
+
+.boxnum2desktop{
+ color: #30E7ED;
+ font-size: 1.7rem;
+
+  margin-top: 0vh;
+}
+#box4box5box{
+margin-top: 6vh;
+
+}
+#box6box7box{
+margin-top: 0vh;
+
+}
+.circle {
+  position: relative;
+  top: -34px;
+  margin: 0 auto -75px;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color:#262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#usericon{
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  margin-top: 0vh;
+
+}
+#eyebox{
+  height: 26vh;
+  margin-left: 17.1vw;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: -5vh;
+  overflow-y: hidden;
+}
+/*work in progress - add second eye maybe, maybe not*/
+
+
+/*center cirlce with display: block and margin: auto*/
+#sclera {
+  background-color: white;
+  border-radius: 100px;
+  height: 100px;
+  width:100px;
+  display: block;
+  margin:auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+
+  border-radius:75% 0;
+  overflow: hidden;
+}
+
+/*position: absolute margin: 50px to center iris in the middle of the sclera*/
+#iris {
+  background-color: #30E7ED;
+  border-radius: 100px;
+  height:50px;
+  width: 50px;
+  display: block;
+  margin: 26px;
+  position: absolute;
+  opacity: .9;
+}
+
+/*position: absolute margin: 25px half of iris to center pupil in the middle of the iris*/
+#pupil {
+  background-color: #000000;
+  border-radius: 100px;
+  height: 20px;
+  width: 20px;
+  display: block;
+  margin: 15px;
+  position: absolute;
+}
+
+#eyeLib {
+  background-color: #262626;
+  position: absolute;
+  margin-top: -100px;
+  margin-left: -140px;
+  animation-name: blink;
+  animation-duration: 6s ;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+  transform:  rotate(-45deg);
+}
+
+@keyframes blink {
+  0% {height: 0px; width:260px;}
+  50% {height: 240px; width:260px;}
+  100% {height: 0px; width: 260px;}
+}
+.glow{
+  color: #262626;
+  text-align: center;
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation:glow 3s ease-in-out infinite alternate ;
+  animation: glow 3s ease-in-out infinite alternate ;
+}
+ @-webkit-keyframes glow{
+  from {
+    text-shadow: 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #30E7ED, 0 0 3px #30E7ED, 0 0 4px #30E7ED, 0 0 5px #30E7ED, 0 0 6px #30E7ED ;
+
+  }
+   top{
+    text-shadow: 0 0 0px #30E7ED, 0 0 2px , 0 0 4px #30E7ED, 0 0 6px #30E7ED, 0 0 8px #30E7ED, 0 0 10px #30E7ED, 0 0 px #30E7ED;
+   }
+
+  }
+
+
+
+}
+}
+
+@media (min-width: 1100px){
+  #sponsers{
+  height: 65vh;
+  margin-top: 8.4vh;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left: 3.4vw;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.5vh;
+
+}
+#box1{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box1title{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box2{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box2title{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box3{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#box3title{
+  display: none;
+  height: 0vh;
+  width:0vw ;
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:2px #30E7ED solid;
+  margin-top: 1.5vh;
+
+}
+#maincol{
+  height: 82.2vh;
+  margin-top: 8.3vh;
+
+}
+#clashinfo{
+  height: 65vh;
+  margin-top: 8.4vh;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left:1.6vw;
+}
+p{
+  margin-left: 1vw;
+}
+
+
+
+
+
+
+}
+
+@media (min-width: 1200px){
+  #sponsers{
+  height: 71vh;
+  margin-top: 5.7vh;
+  border: 3px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left: 3.4vw;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:3px #30E7ED solid;
+  margin-top: 1.5vh;
+
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:3px #30E7ED solid;
+  margin-top: 1.5vh;
+
+}
+#maincol{
+  height: 82.2vh;
+  margin-top: 6.3vh;
+
+}
+#clashinfo{
+  height: 71vh;
+  margin-top: 5.7vh;
+  border: 3px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left:1.6vw;
+}
+p{
+  margin-left: 1vw;
+}
+
+
+
+#box4{
+  height: 21vh;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  width: 52vw;
+  margin-top: -4.5vh;
+  margin-left: 4vw;
+}
+
+#box5{
+  height: 21vh;
+  margin-left: 12.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  width: 52vw;
+  margin-top: -4.5vh;
+}
+span.mdi{
+  color: #30E7ED;
+   font-size:4.6rem;
+}
+
+i.far {
+   color: #30E7ED;
+   font-size:3.9rem;
+
+}
+i.ui{
+  font-size:3.7rem;
+
+}
+i.fas{
+   color: #30E7ED;
+   font-size:3.7rem;
+}
+
+#box6{
+  height: 21vh;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  width: 52vw;
+  margin-top: 1vh;
+  margin-left: 4vw;
+}
+
+#box7{
+  height: 21vh;
+  margin-left: 12.1vw;
+  border: 2px #30E7ED solid;
+  border-radius: 10px;
+  width: 52vw;
+  margin-top: 1vh;
+}
+#box4title{
+  height: 11.8vh;
+  color: #30E7ED;
+
+  margin-top: 1vh;
+  font-size: 1.5rem;
+  padding-top: 6vh;
+
+}
+#box5title{
+ height: 11.8vh;
+ color: #30E7ED;
+ margin-top: 1vh;
+ font-size: 1.5rem;
+ padding-top: 3.7vh;
+ margin-bottom: -2.2vh;
+
+}
+#box6title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1.2rem;
+  padding-top: 4.2vh;
+
+
+}
+#box7title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1.2rem;
+  padding-top: 4.2vh;
+
+}
+.boxnumdesktop{
+ color: #30E7ED;
+  font-size: 2rem;
+  margin-top: -0.8vh;
+}
+
+
+.boxnum2desktop{
+ color: #30E7ED;
+ font-size: 2.2rem;
+
+  margin-top: -0.8vh;
+}
+#box4box5box{
+margin-top: 6vh;
+
+}
+#box6box7box{
+margin-top: 0vh;
+
+}
+.circle {
+  position: relative;
+  top: -35px;
+  margin: 0 auto -75px;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color:#262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#usericon{
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  margin-top: 0vh;
+
+}
+#eyebox{
+  height: 26vh;
+  margin-left: 17.1vw;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: -5vh;
+  overflow-y: hidden;
+}
+/*work in progress - add second eye maybe, maybe not*/
+
+
+/*center cirlce with display: block and margin: auto*/
+#sclera {
+  background-color: white;
+  border-radius: 100px;
+  height: 150px;
+  width:150px;
+  display: block;
+  margin:auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+
+  border-radius:75% 0;
+  overflow: hidden;
+}
+
+/*position: absolute margin: 50px to center iris in the middle of the sclera*/
+#iris {
+  background-color: #30E7ED;
+  border-radius: 100px;
+  height:70px;
+  width: 70px;
+  display: block;
+  margin: 40px;
+  position: absolute;
+  opacity: .9;
+}
+
+/*position: absolute margin: 25px half of iris to center pupil in the middle of the iris*/
+#pupil {
+  background-color: #000000;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+  display: block;
+  margin: 20px;
+  position: absolute;
+}
+
+#eyeLib {
+  background-color: #262626;
+  position: absolute;
+  margin-top: -100px;
+  margin-left: -140px;
+  animation-name: blink;
+  animation-duration: 6s ;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+  transform:  rotate(-45deg);
+}
+
+@keyframes blink {
+  0% {height: 0px; width:260px;}
+  50% {height: 240px; width:260px;}
+  100% {height: 0px; width: 260px;}
+}
+.glow{
+  color: #262626;
+  text-align: center;
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation:glow 3s ease-in-out infinite alternate ;
+  animation: glow 3s ease-in-out infinite alternate ;
+}
+ @-webkit-keyframes glow{
+  from {
+    text-shadow: 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #30E7ED, 0 0 3px #30E7ED, 0 0 4px #30E7ED, 0 0 5px #30E7ED, 0 0 6px #30E7ED ;
+
+  }
+   top{
+    text-shadow: 0 0 0px #30E7ED, 0 0 2px , 0 0 4px #30E7ED, 0 0 6px #30E7ED, 0 0 8px #30E7ED, 0 0 10px #30E7ED, 0 0 px #30E7ED;
+   }
+
+  }
+
+
+
+}
+@media (min-width: 1300px){
+  #sponsers{
+  height: 71vh;
+  margin-top: 7vh;
+  border: 3px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left: 3.4vw;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:3px #30E7ED solid;
+  margin-top: 1.5vh;
+  font-size: 1.5rem;
+
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:3px #30E7ED solid;
+  margin-top: 1.5vh;
+  font-size: 1.5rem;
+
+}
+#maincol{
+  height: 82.2vh;
+  margin-top: 8.3vh;
+
+}
+#clashinfo{
+  height: 71vh;
+  margin-top: 7vh;
+  border: 3px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left:1.6vw;
+}
+p{
+  margin-left: 1vw;
+  font-size: 1.3rem;
+}
+#box4title{
+  height: 11.8vh;
+  color: #30E7ED;
+
+  margin-top: 1vh;
+  font-size: 1.5rem;
+  padding-top: 6vh;
+
+}
+#box5title{
+ height: 11.8vh;
+ color: #30E7ED;
+ margin-top: 1vh;
+ font-size: 1.5rem;
+ padding-top: 3.7vh;
+ margin-bottom: -2.2vh;
+
+}
+#box6title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1.2rem;
+  padding-top: 4.2vh;
+
+
+}
+#box7title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1.2rem;
+  padding-top: 4.2vh;
+
+}
+.boxnumdesktop{
+ color: #30E7ED;
+  font-size: 2rem;
+  margin-top: -0.8vh;
+}
+
+
+.boxnum2desktop{
+ color: #30E7ED;
+ font-size: 2.2rem;
+
+  margin-top: -0.8vh;
+}
+
+
+}
+@media (min-width: 1361px){
+  #sponsers{
+  height: 71vh;
+  margin-top: 7vh;
+  border: 3px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left: 3.4vw;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:3px #30E7ED solid;
+  margin-top: 1.5vh;
+  font-size: 1.5rem;
+
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:3px #30E7ED solid;
+  margin-top: 1.5vh;
+  font-size: 1.5rem;
+
+}
+#maincol{
+  height: 82.2vh;
+  margin-top: 8.3vh;
+
+}
+#clashinfo{
+  height: 71vh;
+  margin-top: 7vh;
+  border: 3px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left:1.6vw;
+}
+p{
+  margin-left: 1vw;
+  font-size: 1.3rem;
+}
+#box4title{
+  height: 11.8vh;
+  color: #30E7ED;
+
+  margin-top: 1vh;
+  font-size: 1.7rem;
+  padding-top: 6vh;
+
+}
+#box5title{
+ height: 11.8vh;
+ color: #30E7ED;
+ margin-top: 1vh;
+ font-size: 1.7rem;
+ padding-top: 3.7vh;
+ margin-bottom: -2.2vh;
+
+}
+#box6title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1.5rem;
+  padding-top: 4.2vh;
+
+
+}
+#box7title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1.5rem;
+  padding-top: 4.2vh;
+
+}
+.boxnumdesktop{
+ color: #30E7ED;
+  font-size: 2rem;
+  margin-top: 0vh;
+}
+
+
+.boxnum2desktop{
+ color: #30E7ED;
+ font-size: 2.2rem;
+
+  margin-top: 0vh;
+}
+.circle {
+  position: relative;
+  top: -35px;
+  margin: 0 auto -75px;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color:#262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#usericon{
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  margin-top: 0vh;
+
+}
+#eyebox{
+  height: 26vh;
+  margin-left: 17.1vw;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: -5vh;
+  overflow-y: hidden;
+}
+/*work in progress - add second eye maybe, maybe not*/
+
+
+/*center cirlce with display: block and margin: auto*/
+#sclera {
+  background-color: white;
+  border-radius: 100px;
+  height: 150px;
+  width:150px;
+  display: block;
+  margin:auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+
+  border-radius:75% 0;
+  overflow: hidden;
+}
+
+/*position: absolute margin: 50px to center iris in the middle of the sclera*/
+#iris {
+  background-color: #30E7ED;
+  border-radius: 100px;
+  height:70px;
+  width: 70px;
+  display: block;
+  margin: 40px;
+  position: absolute;
+  opacity: .9;
+}
+
+/*position: absolute margin: 25px half of iris to center pupil in the middle of the iris*/
+#pupil {
+  background-color: #000000;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+  display: block;
+  margin: 20px;
+  position: absolute;
+}
+
+#eyeLib {
+  background-color: #262626;
+  position: absolute;
+  margin-top: -100px;
+  margin-left: -140px;
+  animation-name: blink;
+  animation-duration: 6s ;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+  transform:  rotate(-45deg);
+}
+
+@keyframes blink {
+  0% {height: 0px; width:260px;}
+  50% {height: 240px; width:260px;}
+  100% {height: 0px; width: 260px;}
+}
+.glow{
+  color: #262626;
+  text-align: center;
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation:glow 3s ease-in-out infinite alternate ;
+  animation: glow 3s ease-in-out infinite alternate ;
+}
+ @-webkit-keyframes glow{
+  from {
+    text-shadow: 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #30E7ED, 0 0 3px #30E7ED, 0 0 4px #30E7ED, 0 0 5px #30E7ED, 0 0 6px #30E7ED ;
+
+  }
+   top{
+    text-shadow: 0 0 0px #30E7ED, 0 0 2px , 0 0 4px #30E7ED, 0 0 6px #30E7ED, 0 0 8px #30E7ED, 0 0 10px #30E7ED, 0 0 px #30E7ED;
+   }
+
+  }
+
+
+}
+
+@media (min-width: 1440px){
+  #sponsers{
+  height: 71vh;
+  margin-top: 8.5vh;
+  border: 3px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left: 3.4vw;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:3px #30E7ED solid;
+  margin-top: 1.5vh;
+  font-size: 1.5rem;
+
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:3px #30E7ED solid;
+  margin-top: 1.5vh;
+  font-size: 1.5rem;
+
+}
+#maincol{
+  height: 82.2vh;
+  margin-top: 8.3vh;
+
+}
+#clashinfo{
+  height: 71vh;
+  margin-top: 8.5vh;
+  border: 3px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left:1.6vw;
+}
+p{
+  margin-left: 1vw;
+  font-size: 1.3rem;
+}
+#box4title{
+  height: 11.8vh;
+  color: #30E7ED;
+
+  margin-top: 1vh;
+  font-size: 1.8rem;
+  padding-top: 6vh;
+
+}
+#box5title{
+ height: 11.8vh;
+ color: #30E7ED;
+ margin-top: 1vh;
+ font-size: 1.8rem;
+ padding-top: 4vh;
+ margin-bottom: -2.2vh;
+
+}
+#box6title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1.5rem;
+  padding-top: 4.2vh;
+
+
+}
+#box7title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1.5rem;
+  padding-top: 4.2vh;
+
+}
+.boxnumdesktop{
+ color: #30E7ED;
+  font-size: 2rem;
+  margin-top: -0.5vh;
+}
+
+
+.boxnum2desktop{
+ color: #30E7ED;
+ font-size: 2.2rem;
+
+  margin-top: 0.1vh;
+}
+.glow{
+  color: #262626;
+  text-align: center;
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation:glow 3s ease-in-out infinite alternate ;
+  animation: glow 3s ease-in-out infinite alternate ;
+}
+ @-webkit-keyframes glow{
+  from {
+    text-shadow: 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #30E7ED, 0 0 3px #30E7ED, 0 0 4px #30E7ED, 0 0 5px #30E7ED, 0 0 6px #30E7ED ;
+
+  }
+   top{
+    text-shadow: 0 0 0px #30E7ED, 0 0 2px , 0 0 4px #30E7ED, 0 0 6px #30E7ED, 0 0 8px #30E7ED, 0 0 10px #30E7ED, 0 0 px #30E7ED;
+   }
+
+  }
+
+
+
+}
+@media (min-width: 1585px){
+ #box4title{
+  height: 11.8vh;
+  color: #30E7ED;
+
+  margin-top: 1vh;
+  font-size: 2rem;
+  padding-top: 6vh;
+
+}
+#box5title{
+ height: 11.8vh;
+ color: #30E7ED;
+ margin-top: 1vh;
+ font-size: 2rem;
+ padding-top: 4.5vh;
+ margin-bottom: -2.2vh;
+
+}
+#box6title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1.8rem;
+  padding-top: 4.2vh;
+
+
+}
+#box7title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 1.7rem;
+  padding-top: 4.2vh;
+
+}
+.boxnumdesktop{
+ color: #30E7ED;
+  font-size: 2.4rem;
+  margin-top: 0vh;
+}
+
+
+.boxnum2desktop{
+ color: #30E7ED;
+ font-size: 2.4rem;
+
+  margin-top: 0vh;
+}
+.circle {
+  position: relative;
+  top: -35px;
+  margin: 0 auto -75px;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color:#262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#usericon{
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  margin-top: 0vh;
+
+}
+#eyebox{
+  height: 26vh;
+  margin-left: 17.1vw;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: -5vh;
+  overflow-y: hidden;
+}
+/*work in progress - add second eye maybe, maybe not*/
+
+
+/*center cirlce with display: block and margin: auto*/
+#sclera {
+  background-color: white;
+  border-radius: 100px;
+  height: 150px;
+  width:150px;
+  display: block;
+  margin:auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+
+  border-radius:75% 0;
+  overflow: hidden;
+}
+
+/*position: absolute margin: 50px to center iris in the middle of the sclera*/
+#iris {
+  background-color: #30E7ED;
+  border-radius: 100px;
+  height:70px;
+  width: 70px;
+  display: block;
+  margin: 40px;
+  position: absolute;
+  opacity: .9;
+}
+
+/*position: absolute margin: 25px half of iris to center pupil in the middle of the iris*/
+#pupil {
+  background-color: #000000;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+  display: block;
+  margin: 20px;
+  position: absolute;
+}
+
+#eyeLib {
+  background-color: #262626;
+  position: absolute;
+  margin-top: -100px;
+  margin-left: -140px;
+  animation-name: blink;
+  animation-duration: 6s ;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+  transform:  rotate(-45deg);
+}
+
+@keyframes blink {
+  0% {height: 0px; width:260px;}
+  50% {height: 240px; width:260px;}
+  100% {height: 0px; width: 260px;}
+}
+.glow{
+  color: #262626;
+  text-align: center;
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation:glow 3s ease-in-out infinite alternate ;
+  animation: glow 3s ease-in-out infinite alternate ;
+}
+ @-webkit-keyframes glow{
+  from {
+    text-shadow: 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #30E7ED, 0 0 3px #30E7ED, 0 0 4px #30E7ED, 0 0 5px #30E7ED, 0 0 6px #30E7ED ;
+
+  }
+   top{
+    text-shadow: 0 0 0px #30E7ED, 0 0 2px , 0 0 4px #30E7ED, 0 0 6px #30E7ED, 0 0 8px #30E7ED, 0 0 10px #30E7ED, 0 0 px #30E7ED;
+   }
+
+  }
+
+}
+@media (min-width: 1760px){
+ #box4title{
+  height: 11.8vh;
+  color: #30E7ED;
+
+  margin-top: 1vh;
+  font-size: 2.3rem;
+  padding-top: 6vh;
+
+}
+#box5title{
+ height: 11.8vh;
+ color: #30E7ED;
+ margin-top: 1vh;
+ font-size: 2.3rem;
+ padding-top: 4.3vh;
+ margin-bottom: -2.2vh;
+
+}
+#box6title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 2rem;
+  padding-top: 4.2vh;
+
+
+}
+#box7title{
+  height: 11.8vh;
+  color: #30E7ED;
+  line-height: 4vh;
+  margin-top: 1vh;
+  font-size: 2rem;
+  padding-top: 4.2vh;
+
+}
+.boxnumdesktop{
+ color: #30E7ED;
+  font-size: 2.7rem;
+  margin-top: 0vh;
+}
+
+
+.boxnum2desktop{
+ color: #30E7ED;
+ font-size: 2.7rem;
+
+  margin-top: 0vh;
+}
+.circle {
+  position: relative;
+  top: -35px;
+  margin: 0 auto -75px;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color:#262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+span.mdi{
+  color: #30E7ED;
+   font-size:5.5rem;
+}
+
+i.far {
+   color: #30E7ED;
+   font-size:4.9rem;
+
+}
+i.ui{
+  font-size:4.7rem;
+
+}
+i.fas{
+   color: #30E7ED;
+   font-size:4.7rem;
+}
+
+#usericon{
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  margin-top: 0vh;
+
+}
+#eyebox{
+  height: 26vh;
+  margin-left: 17.1vw;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: -5vh;
+  overflow-y: hidden;
+}
+/*work in progress - add second eye maybe, maybe not*/
+
+
+/*center cirlce with display: block and margin: auto*/
+#sclera {
+  background-color: white;
+  border-radius: 100px;
+  height: 150px;
+  width:150px;
+  display: block;
+  margin:auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+
+  border-radius:75% 0;
+  overflow: hidden;
+}
+
+/*position: absolute margin: 50px to center iris in the middle of the sclera*/
+#iris {
+  background-color: #30E7ED;
+  border-radius: 100px;
+  height:70px;
+  width: 70px;
+  display: block;
+  margin: 40px;
+  position: absolute;
+  opacity: .9;
+}
+
+/*position: absolute margin: 25px half of iris to center pupil in the middle of the iris*/
+#pupil {
+  background-color: #000000;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+  display: block;
+  margin: 20px;
+  position: absolute;
+}
+
+#eyeLib {
+  background-color: #262626;
+  position: absolute;
+  margin-top: -100px;
+  margin-left: -140px;
+  animation-name: blink;
+  animation-duration: 6s ;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+  transform:  rotate(-45deg);
+}
+
+@keyframes blink {
+  0% {height: 0px; width:260px;}
+  50% {height: 240px; width:260px;}
+  100% {height: 0px; width: 260px;}
+}
+.glow{
+  color: #262626;
+  text-align: center;
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation:glow 3s ease-in-out infinite alternate ;
+  animation: glow 3s ease-in-out infinite alternate ;
+}
+ @-webkit-keyframes glow{
+  from {
+    text-shadow: 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #30E7ED, 0 0 3px #30E7ED, 0 0 4px #30E7ED, 0 0 5px #30E7ED, 0 0 6px #30E7ED ;
+
+  }
+   top{
+    text-shadow: 0 0 0px #30E7ED, 0 0 2px , 0 0 4px #30E7ED, 0 0 6px #30E7ED, 0 0 8px #30E7ED, 0 0 10px #30E7ED, 0 0 px #30E7ED;
+   }
+
+  }
+
+}
+
+
+@media (min-width: 1920px){
+  #sponsers{
+  height: 76vh;
+  margin-top: 6vh;
+  border: 4px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left: 3.4vw;
+}
+#sponsortitle{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:4px #30E7ED solid;
+  margin-top: 1.5vh;
+  font-size: 1.7rem;
+
+}
+#clashtitleinfo{
+  height: 7vh;
+  color: #30E7ED;
+  border-bottom:4px #30E7ED solid;
+  margin-top: 1.5vh;
+  font-size: 1.7rem;
+
+}
+#maincol{
+  height: 82.2vh;
+  margin-top: 8.2vh;
+
+}
+#clashinfo{
+  height: 76vh;
+  margin-top: 6vh;
+  border: 4px #30E7ED solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left:1.6vw;
+}
+p{
+  margin-left: 1vw;
+  font-size: 1.6rem;
+}
+#eyebox{
+  height: 26vh;
+  margin-left: 17.1vw;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 52vw;
+  margin-top: -5vh;
+  overflow-y: hidden;
+}
+/*work in progress - add second eye maybe, maybe not*/
+
+
+/*center cirlce with display: block and margin: auto*/
+#sclera {
+  background-color: white;
+  border-radius: 100px;
+  height: 160px;
+  width:160px;
+  display: block;
+  margin:auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+
+  border-radius:75% 0;
+  overflow: hidden;
+}
+
+/*position: absolute margin: 50px to center iris in the middle of the sclera*/
+#iris {
+  background-color: #30E7ED;
+  border-radius: 100px;
+  height:75px;
+  width: 75px;
+  display: block;
+  margin: 43px;
+  position: absolute;
+  opacity: .9;
+}
+
+/*position: absolute margin: 25px half of iris to center pupil in the middle of the iris*/
+#pupil {
+  background-color: #000000;
+  border-radius: 100px;
+  height: 33px;
+  width: 33px;
+  display: block;
+  margin: 21px;
+  position: absolute;
+}
+
+#eyeLib {
+  background-color: #262626;
+  position: absolute;
+  margin-top: -100px;
+  margin-left: -140px;
+  animation-name: blink;
+  animation-duration: 6s ;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+  transform:  rotate(-45deg);
+}
+
+@keyframes blink {
+  0% {height: 0px; width:280px;}
+  50% {height: 240px; width:280px;}
+  100% {height: 0px; width: 280px;}
+}
+.glow{
+  color: #262626;
+  text-align: center;
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation:glow 3s ease-in-out infinite alternate ;
+  animation: glow 3s ease-in-out infinite alternate ;
+}
+ @-webkit-keyframes glow{
+  from {
+    text-shadow: 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #30E7ED, 0 0 3px #30E7ED, 0 0 4px #30E7ED, 0 0 5px #30E7ED, 0 0 6px #30E7ED ;
+
+  }
+   top{
+    text-shadow: 0 0 0px #30E7ED, 0 0 2px , 0 0 4px #30E7ED, 0 0 6px #30E7ED, 0 0 8px #30E7ED, 0 0 10px #30E7ED, 0 0 px #30E7ED;
+   }
+
+  }
+
+
+
+}

@@ -1,0 +1,535 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Coda");
+body {
+  background-color: #262626;
+}
+#particles-js {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+.ht {
+  position: relative;
+  left: 45%;
+  color: white !important;
+  font-size: 1.35em;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+.no1 {
+  color: white !important;
+  margin-right: 1vw;
+}
+.nbt {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+.cl {
+  height: 40px;
+  width: 115px;
+}
+.rc {
+  height: 40px;
+  width: 60px;
+}
+
+.rc1 {
+  height: 40px;
+  width: 280px;
+  margin-left: 1%;
+}
+.ver {
+  position: relative;
+  color: green;
+  font-size: 16px;
+  background-color: #1b313a;
+  border: #232323;
+  border-radius: 2px;
+  top: 1.5vw;
+  width: 13.5vw;
+  height: fit-content;
+  left: 6.2vw;
+  text-align: center;
+}
+.login-form {
+  top: 50%;
+  left: 72%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: #212021;
+  width: 21em;
+  height: 22em;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 25px 50px #000;
+}
+input[type="email"],
+input[type="password"],
+input[type="username"] {
+  position: relative;
+  color: white;
+  background: transparent;
+  padding: 0.5em 1em 0em 1.2em;
+  outline: none;
+  margin: 0.5em 3em;
+  border: none;
+  border-bottom: 0.1em solid #fff;
+  font-family: Roboto;
+  font-size: 19px;
+  letter-spacing: 1px;
+  top: -2.5vw;
+  left: -2vw;
+}
+.left {
+  padding: 3.7em 0em 2.5em 0em;
+}
+::placeholder {
+  color: whitesmoke;
+  font-weight: 100;
+  font-family: FontAwesome;
+}
+.box {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2.5vw;
+  font-size: 30px;
+  font-weight: 400;
+  color: #03e9f4;
+  text-align: center;
+  font-family: Coda;
+  letter-spacing: 1px;
+}
+
+.buton {
+  margin-left: 26%;
+}
+
+.btn1 {
+  background-color: transparent;
+  outline: none;
+  color: #03e9f4;
+  border: none;
+  letter-spacing: 4px;
+  font-family: Audiowide;
+  text-transform: uppercase;
+  margin: -10px -20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 19px;
+}
+.btn1:hover {
+  color: white;
+}
+.warn {
+  background-color: #f8d7da;
+}
+.cred {
+  position: fixed;
+  height: 17vw;
+  width: 35vw;
+  top: 19%;
+  left: 7%;
+}
+.stxt {
+  position: absolute;
+  top: 52%;
+  left: 19%;
+  font-size: 35px;
+  font-weight: 500;
+  justify-content: center;
+  color: white;
+}
+.en {
+  position: absolute;
+  color: white;
+  font-size: 65px;
+  font-weight: bold;
+  top: 57%;
+  left: 7%;
+  justify-content: center;
+}
+.ot {
+  text-decoration: none;
+  outline: none;
+}
+.container form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-left: 7vw;
+  letter-spacing: 4px;
+  font-family: Audiowide;
+}
+
+.container a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #03e9f4, 0 0 3px #03e9f4, 0 0 3px #03e9f4,
+    0 0 10px #03e9f4;
+}
+
+.container a span {
+  position: absolute;
+  display: block;
+}
+
+.container a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1.8s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.container a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1.8s linear infinite;
+  animation-delay: 0.35s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.container a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1.8s linear infinite;
+  animation-delay: 0.65s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.container a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1.8s linear infinite;
+  animation-delay: 0.95s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+  animation-fill-mode: backwards;
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  animation-duration: 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-in.one {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 1.8s;
+  -moz-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+.fade-in.four {
+  -webkit-animation-delay: 2.3s;
+  -moz-animation-delay: 2.3s;
+  animation-delay: 2.3s;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 426px) {
+  .cred {
+    position: fixed;
+    height: 38vw;
+    width: 76vw;
+    top: 9%;
+    left: 12%;
+  }
+  .stxt {
+    display: none;
+  }
+  .en {
+    display: none;
+  }
+  .ht {
+    position: relative;
+    left: 5%;
+    font-size: 1.45em;
+  }
+  .ver {
+    position: relative;
+    width: 35vw;
+    height: fit-content;
+    text-align: center;
+    left: 20vw;
+    top: 2.5vw;
+  }
+  .container form a {
+    position: relative;
+    top: 3.5vw;
+    margin-left: 23vw;
+    font-size: 20px;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="username"] {
+    font-size: 19px;
+    position: relative;
+    left: -6vw;
+    top: -6vw;
+  }
+  .box {
+    margin-top: 4vw;
+    font-size: 30px;
+  }
+  .cl {
+    height: 37px;
+    width: 105px;
+  }
+  .login-form {
+    height: 22em;
+    top: 60%;
+    left: 50%;
+  }
+  .no1 {
+    font-size: 20px;
+  }
+  .nt {
+    font-size: 15px;
+  }
+  .ot {
+    font-size: 15px;
+  }
+  .rc1 {
+    height: 30px;
+    width: 100px;
+  }
+}
+@media (max-width: 380px) {
+  .ver {
+    left: 21vw;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="username"] {
+    top: -9vw;
+    left: -11vw;
+  }
+  .box {
+    margin-top: 4.1vw;
+  }
+}
+@media (max-width: 365px) {
+  .login-form {
+    height: 18.5em;
+    width: 17em;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="username"] {
+    font-size: 16.5px;
+    top: -10.5vw;
+    left: -12vw;
+  }
+  .box {
+    font-size: 28px;
+    margin-top: 4vw;
+  }
+  .ver {
+    left: 20vw;
+  }
+  .container form a {
+    font-size: 16px;
+    left: -5vw;
+    top: -1vw;
+  }
+  .btn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 325px) {
+  .container form a {
+    left: -2vw;
+  }
+  .btn1 {
+    font-size: 17px;
+  }
+  .ver {
+    left: 20vw;
+  }
+  .box {
+    margin-top: 4.5vw !important;
+  }
+  .cred {
+    height: 35vw;
+    width: 72vw;
+    top: 11%;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="username"] {
+    top: -12.5vw;
+    left: -14vw;
+  }
+}
+@media (min-width: 1435px) {
+  .ver {
+    left: 3vw;
+  }
+  .container form a {
+    left: -0.8vw;
+  }
+}
+@media (min-width: 1023) {
+  .ver {
+    left: 15.5vw !important;
+  }
+}
+@media (min-width: 1700px) {
+  .cred {
+    position: fixed;
+    margin-left: 2vw;
+  }
+  .stxt {
+    position: absolute;
+    left: 22%;
+    top: 47%;
+    font-size: 2.5vw;
+  }
+  .en {
+    position: absolute;
+    margin-left: 5.4vw;
+    margin-top: -2vw;
+    font-size: 4.6vw;
+  }
+  .box {
+    font-size: 32px;
+  }
+  .buton {
+    margin-left: 26%;
+  }
+  .login-form {
+    height: 29em;
+    width: 27em;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="username"] {
+    font-size: 24px;
+    margin-top: 1vw;
+    padding-top: 0.8vw;
+  }
+  .container form a {
+    font-size: 25px;
+  }
+  .btn1 {
+    font-size: 30px;
+  }
+}
